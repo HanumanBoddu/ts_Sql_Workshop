@@ -1,6 +1,6 @@
 import Feedback from "../Models/Feedback";
 
-export class FeedbackService {
+export default class FeedbackService {
     public feedbacks: Feedback[] = [];
     constructor() {
         this.feedbacks.push(new Feedback(1, 1, 4, 'Good product'));

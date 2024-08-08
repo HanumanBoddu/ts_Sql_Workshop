@@ -1,6 +1,6 @@
 import products from '../Models/product';
 
-export class ProductService {
+export default class ProductService {
    public products: products[] = [];
     constructor() {
         this.products.push(new products(1, 'Samsung', 70000, 'Samsung with 8GB RAM and 128GB storage'));
