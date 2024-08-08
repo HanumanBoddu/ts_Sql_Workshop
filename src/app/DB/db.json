@@ -1,0 +1,70 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name": "Samsung",
+            "price": 70000,
+            "description": "Samsung with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 2,
+            "name": "OnePlus",
+            "price": 35000,
+            "description": "OnePlus with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 3,
+            "name": "iPhone",
+            "price": 80000,
+            "description": "iPhone with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 4,
+            "name": "Google",
+            "price": 75000,
+            "description": "Google with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 5,
+            "name": "Oppo",
+            "price": 45000,
+            "description": "Oppo with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 6,
+            "name": "Vivo",
+            "price": 30000,
+            "description": "Vivo with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 7,
+            "name": "Redmi",
+            "price": 28000,
+            "description": "Redmi with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 8,
+            "name": "Realme",
+            "price": 30000,
+            "description": "Realme with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 9,
+            "name": "Asus",
+            "price": 28000,
+            "description": "Asus with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 10,
+            "name": "Nokia",
+            "price": 45000,
+            "description": "Nokia with 8GB RAM and 128GB storage"
+        },
+        {
+            "id": 11,
+            "name": "Motorola",
+            "price": 30000,
+            "description": "Motorola with 8GB RAM and 128GB storage"
+        }
+    ]
+}
