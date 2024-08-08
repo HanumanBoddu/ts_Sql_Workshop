@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const logger_1 = __importDefault(require("../Logger/logger"));
 const product_1 = __importDefault(require("../Models/product"));
 class ProductService {
     constructor() {
@@ -20,21 +21,14 @@ class ProductService {
         this.products.push(new product_1.default(11, 'Motorola', 30000, 'Motorola with 8GB RAM and 128GB storage'));
     }
     addProduct(product) {
+        logger_1.default.info('Function addProduct started');
         this.products.push(product);
+        logger_1.default.info('Function addProduct Completed');
     }
     getProducts() {
+        logger_1.default.info('Function getProducts started');
         return this.products;
-    }
-    getProductById(id) {
-        return this.products.find(product => product.id === id);
-    }
-    updateProduct(product) {
-        let index = this.products.findIndex(p => p.id === product.id);
-        this.products[index] = product;
-    }
-    deleteProduct(id) {
-        let index = this.products.findIndex(p => p.id === id);
-        this.products.splice(index, 1);
+        logger_1.default.info('Function getProducts Completed');
     }
 }
 exports.default = ProductService;

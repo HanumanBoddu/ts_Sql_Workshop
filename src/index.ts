@@ -1,6 +1,7 @@
 import  ProductService from './app/Service/productService';
 import  FeedbackService from './app/Service/feedBackService';
 import  Feedback from './app/Models/Feedback';
+import Product from './app/Models/product';
 
 let productService = new ProductService();
 let feedbackService = new FeedbackService();

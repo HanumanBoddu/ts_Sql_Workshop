@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const productService_1 = __importDefault(require("./app/Service/productService"));
 const feedBackService_1 = __importDefault(require("./app/Service/feedBackService"));
-const Feedback_1 = __importDefault(require("./app/Models/Feedback"));
 let productService = new productService_1.default();
 let feedbackService = new feedBackService_1.default();
 console.log('Products:');
@@ -14,8 +13,3 @@ console.log('Feedbacks of product 1:');
 console.log(feedbackService.getFeedbackByProductId(1));
 console.log('Average rating of product 1:');
 console.log(feedbackService.avgRating(1));
-feedbackService.addFeedback(new Feedback_1.default(6, 2, 4, 'Good product'));
-console.log('Feedbacks of product 2:');
-console.log(feedbackService.getFeedbackByProductId(2));
-console.log('Average rating of product 2:');
-console.log(feedbackService.avgRating(2));

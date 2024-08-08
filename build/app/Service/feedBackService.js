@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Feedback_1 = __importDefault(require("../Models/Feedback"));
+const logger_1 = __importDefault(require("../Logger/logger"));
 class FeedbackService {
     constructor() {
         this.feedbacks = [];
@@ -14,32 +15,29 @@ class FeedbackService {
         this.feedbacks.push(new Feedback_1.default(5, 1, 1, 'Worst product'));
     }
     addFeedback(feedback) {
+        logger_1.default.info('Function addFeedback started');
         this.feedbacks.push(feedback);
-    }
-    getFeedbacks() {
-        return this.feedbacks;
+        logger_1.default.info('Function addFeedback Completed');
     }
     getFeedbackById(id) {
+        logger_1.default.info('Function getFeedbackById started');
         return this.feedbacks.find(feedback => feedback.id === id);
-    }
-    updateFeedback(feedback) {
-        let index = this.feedbacks.findIndex(f => f.id === feedback.id);
-        this.feedbacks[index] = feedback;
-    }
-    deleteFeedback(id) {
-        let index = this.feedbacks.findIndex(f => f.id === id);
-        this.feedbacks.splice(index, 1);
+        logger_1.default.info('Function getFeedbackById Completed');
     }
     getFeedbackByProductId(productId) {
+        logger_1.default.info('Function getFeedbackByProductId started');
         return this.feedbacks.filter(feedback => feedback.productId === productId);
+        logger_1.default.info('Function getFeedbackByProductId Completed');
     }
     avgRating(productId) {
+        logger_1.default.info('Function avgRating started');
         let feedbacks = this.getFeedbackByProductId(productId);
         let totalRating = 0;
         feedbacks.forEach(feedback => {
             totalRating += feedback.rating;
         });
         return totalRating / feedbacks.length;
+        logger_1.default.info('Function avgRating Completed');
     }
 }
 exports.default = FeedbackService;

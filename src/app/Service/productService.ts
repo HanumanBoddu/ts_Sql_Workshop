@@ -1,3 +1,4 @@
+import logger from '../Logger/logger';
 import products from '../Models/product';
 
 export default class ProductService {
@@ -16,9 +17,13 @@ export default class ProductService {
         this.products.push(new products(11, 'Motorola', 30000, 'Motorola with 8GB RAM and 128GB storage'));
     }
     public addProduct(product: products) {
+        logger.info('Function addProduct started');
         this.products.push(product);
+        logger.info('Function addProduct Completed');
     }
     public getProducts() {
+        logger.info('Function getProducts started');
         return this.products;
+        logger.info('Function getProducts Completed');
     }
 }
