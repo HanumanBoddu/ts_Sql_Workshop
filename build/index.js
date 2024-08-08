@@ -10,8 +10,6 @@ let productService = new productService_1.default();
 let feedbackService = new feedBackService_1.default();
 console.log('Products:');
 console.log(productService.getProducts());
-console.log('Feedbacks:');
-console.log(feedbackService.getFeedbacks());
 console.log('Feedbacks of product 1:');
 console.log(feedbackService.getFeedbackByProductId(1));
 console.log('Average rating of product 1:');

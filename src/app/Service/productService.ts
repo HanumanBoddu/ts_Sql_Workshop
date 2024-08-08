@@ -21,15 +21,4 @@ export default class ProductService {
     public getProducts() {
         return this.products;
     }
-    public getProductById(id: number) {
-        return this.products.find(product => product.id === id);
-    }
-    public updateProduct(product: products) {
-        let index = this.products.findIndex(p => p.id === product.id);
-        this.products[index] = product;
-    }
-    public deleteProduct(id: number) {
-        let index = this.products.findIndex(p => p.id === id);
-        this.products.splice(index, 1);
-    }
 }

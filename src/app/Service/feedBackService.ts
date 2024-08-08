@@ -18,14 +18,6 @@ export default class FeedbackService {
     public getFeedbackById(id: number) {
         return this.feedbacks.find(feedback => feedback.id === id);
     }
-    public updateFeedback(feedback: Feedback) {
-        let index = this.feedbacks.findIndex(f => f.id === feedback.id);
-        this.feedbacks[index] = feedback;
-    }
-    public deleteFeedback(id: number) {
-        let index = this.feedbacks.findIndex(f => f.id === id);
-        this.feedbacks.splice(index, 1);
-    }
     public getFeedbackByProductId(productId: number) {
         return this.feedbacks.filter(feedback => feedback.productId === productId);
     }
