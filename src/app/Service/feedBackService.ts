@@ -26,4 +26,15 @@ export class FeedbackService {
         let index = this.feedbacks.findIndex(f => f.id === id);
         this.feedbacks.splice(index, 1);
     }
+    public getFeedbackByProductId(productId: number) {
+        return this.feedbacks.filter(feedback => feedback.productId === productId);
+    }
+    public avgRating(productId: number) {
+        let feedbacks = this.getFeedbackByProductId(productId);
+        let totalRating = 0;
+        feedbacks.forEach(feedback => {
+            totalRating += feedback.rating;
+        });
+        return totalRating / feedbacks.length;
+    }
 }
